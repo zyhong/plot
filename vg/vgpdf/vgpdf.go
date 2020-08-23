@@ -29,6 +29,9 @@ import (
 // DPI is the nominal resolution of drawing in PDF.
 const DPI = 72
 
+// Declare conformity with Canvas interface
+var _ vg.Canvas = (*Canvas)(nil)
+
 // Canvas implements the vg.Canvas interface,
 // drawing to a PDF.
 type Canvas struct {

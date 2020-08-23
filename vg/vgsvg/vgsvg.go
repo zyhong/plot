@@ -33,6 +33,9 @@ const (
 	DefaultHeight = 4 * vg.Inch
 )
 
+// Declare conformity with Canvas interface
+var _ vg.Canvas = (*Canvas)(nil)
+
 type Canvas struct {
 	svg  *svgo.SVG
 	w, h vg.Length

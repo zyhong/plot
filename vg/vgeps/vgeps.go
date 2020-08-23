@@ -22,6 +22,9 @@ import (
 // DPI is the nominal resolution of drawing in EPS.
 const DPI = 72
 
+// Declare conformity with Canvas interface
+var _ vg.Canvas = (*Canvas)(nil)
+
 type Canvas struct {
 	stack []context
 	w, h  vg.Length

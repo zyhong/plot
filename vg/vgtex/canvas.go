@@ -36,6 +36,9 @@ const (
 	defaultFooter = "\\end{document}\n"
 )
 
+// Declare conformity with Canvas interface
+var _ vg.Canvas = (*Canvas)(nil)
+
 // Canvas implements the vg.Canvas interface, translating drawing
 // primitives from gonum/plot to PGF.
 type Canvas struct {

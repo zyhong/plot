@@ -17,6 +17,9 @@ import (
 	"gonum.org/v1/plot/vg/vgimg"
 )
 
+// Declare conformity with Canvas interface
+var _ vg.Canvas = (*Canvas)(nil)
+
 // Canvas implements the vg.Canvas interface,
 // drawing to an image.Image using vgimg and painting that image
 // into a Gioui context.
